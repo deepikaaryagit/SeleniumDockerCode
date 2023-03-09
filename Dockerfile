@@ -10,7 +10,7 @@ ADD target/libs libs
 #Add .xml files to image 
 ADD testng.xml testng.xml
 #Add Health Check .sh 
-ADD healthcheck.sh healthcheck.sh
+#ADD healthcheck.sh healthcheck.sh
 #Entry point in image
 #ENTRYPOINT sh healthcheck.sh
 ENTRYPOINT java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* -DHUB_HOST=$HUB_HOST -DBROWSER=$BROWSER org.testng.TestNG $MODULE
